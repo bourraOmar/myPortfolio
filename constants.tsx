@@ -1,5 +1,5 @@
 
-import { Skill, Experience, Education, Project, Certification } from './types';
+import { Skill, Experience, Education, Project, Certification } from './types.ts';
 
 export const PERSONAL_INFO = {
   name: "Bourra Omar",

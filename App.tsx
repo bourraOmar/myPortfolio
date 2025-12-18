@@ -6,7 +6,7 @@ import {
 } from 'lucide-react';
 import { 
   PERSONAL_INFO, SKILLS, EXPERIENCES, EDUCATION, PROJECTS 
-} from './constants';
+} from './constants.tsx';
 
 const App: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);

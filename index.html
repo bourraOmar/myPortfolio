@@ -100,16 +100,27 @@
   <script type="importmap">
 {
   "imports": {
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react/": "https://esm.sh/react@^19.2.3/",
     "react": "https://esm.sh/react@^19.2.3",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react-dom": "https://esm.sh/react-dom@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react-dom/client": "https://esm.sh/react-dom@^19.2.3/client",
     "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
   }
 }
 </script>
 </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- Minimal loader for better UX while JS loads -->
+      <div style="height: 100vh; display: flex; align-items: center; justify-content: center; background: black; color: white; font-family: sans-serif;">
+        <div style="text-align: center;">
+          <div style="width: 40px; height: 40px; border: 3px solid #333; border-top-color: #00f2ff; border-radius: 50%; animation: spin 1s linear infinite; margin-bottom: 20px;"></div>
+          <p style="font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.5;">Loading Experience</p>
+        </div>
+      </div>
+    </div>
+    <style>@keyframes spin { to { transform: rotate(360deg); } }</style>
     <script type="module" src="index.tsx"></script>
   </body>
 </html>
