@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bourra Omar | Creative Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              brand: {
+                black: '#000000',
+                gray: '#0a0a0a',
+                accent: '#00f2ff',
+                violet: '#7000ff',
+                gold: '#ffb800'
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        -webkit-font-smoothing: antialiased;
+        background-color: #000000;
+        color: #ffffff;
+        overflow-x: hidden;
+      }
+      
+      /* Light Wave Animation */
+      .light-wave {
+        height: 4px;
+        width: 100%;
+        background: linear-gradient(90deg, 
+          transparent 0%, 
+          #00f2ff 20%, 
+          #7000ff 40%, 
+          #ffb800 60%, 
+          #00f2ff 80%, 
+          transparent 100%
+        );
+        background-size: 200% 100%;
+        animation: flow 4s linear infinite;
+        filter: blur(2px) drop-shadow(0 0 10px rgba(0, 242, 255, 0.5));
+        border-radius: 100%;
+      }
+
+      @keyframes flow {
+        0% { background-position: 100% 0%; }
+        100% { background-position: -100% 0%; }
+      }
+
+      .glow-radial {
+        background: radial-gradient(circle at center, var(--glow-color) 0%, transparent 70%);
+      }
+
+      .glass-card {
+        background: rgba(10, 10, 10, 0.6);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .btn-glow:hover {
+        box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+      }
+
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #000000;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #333;
+        border-radius: 10px;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
