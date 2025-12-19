@@ -58,7 +58,7 @@ const App = () => {
           <span className="text-gradient">craft digital experiences.</span>
         </h1>
 
-        <button className="btn-primary">
+        <button className="btn-primary ">
           <span>Start Partnering</span>
           <div className="btn-icon">
             <ArrowRight size={18} />
