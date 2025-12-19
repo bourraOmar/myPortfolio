@@ -1,17 +1,15 @@
 
 <!DOCTYPE html>
-<html lang="fr" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <title>Bourra Omar | Développeur Full-Stack</title>
-    <meta name="description" content="Portfolio de Bourra Omar, développeur web Full-Stack spécialisé en React, Laravel et architectures modernes." />
-    <link rel="canonical" href="https://bourra.me" />
+<html lang="fr" class="bg-[#050505] text-[#f0f0f0] antialiased selection:bg-white selection:text-black">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOURRA OMAR | Full Stack Developer</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=Unbounded:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     
     <link rel="stylesheet" href="styles.css">
 
@@ -27,15 +25,25 @@
       }
     }
     </script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  </head>
-  <body>
+</head>
+<body>
+    <div id="cursor"></div>
+    <div id="cursor-follower"></div>
+    
+    <!-- Structural Elements -->
+    <div class="axis-line"></div>
+    <div class="grid-bg"></div>
+
     <div id="root">
       <div class="initial-loader">
         <div class="spinner"></div>
-        <p>Loading Experience</p>
+        <p>Initializing Architecture</p>
       </div>
     </div>
-    <script type="text/babel" data-type="module" src="./index.js?v=3"></script>
-  </body>
+
+    <!-- Essential Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script type="module" src="index.js"></script>
+</body>
 </html>
