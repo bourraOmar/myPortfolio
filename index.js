@@ -86,7 +86,7 @@ const App = () => {
 
         <div className="projects-grid">
           {PROJECTS.map((project, i) => (
-            <div key={i} className="glass-card">
+            <div key={i} className="glass-card" style={{ '--i': i }}>
               <div className="card-header">
                 <div className="card-icon">
                   <Globe size={32} />
@@ -124,7 +124,7 @@ const App = () => {
 
           <div className="skills-grid">
             {SKILLS.map((skill, i) => (
-              <div key={i} className="skill-card glass-card">
+              <div key={i} className="skill-card glass-card" style={{ '--i': i }}>
                 <span className="skill-cat">{skill.category}</span>
                 <span className="skill-name">{skill.name}</span>
               </div>
