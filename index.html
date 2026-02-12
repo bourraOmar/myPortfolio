@@ -8,7 +8,7 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=Unbounded:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     
     <link rel="stylesheet" href="styles.css">
@@ -16,30 +16,16 @@
     <script type="importmap">
     {
       "imports": {
-        "react": "https://esm.sh/react@^19.2.3",
-        "react/": "https://esm.sh/react@^19.2.3/",
-        "react-dom": "https://esm.sh/react-dom@^19.2.3",
-        "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-        "react-dom/client": "https://esm.sh/react-dom@^19.2.3/client",
-        "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
+        "react": "https://esm.sh/react@18.2.0",
+        "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+        "framer-motion": "https://esm.sh/framer-motion@10.16.4",
+        "lucide-react": "https://esm.sh/lucide-react@0.263.1"
       }
     }
     </script>
 </head>
 <body>
-    <div id="cursor"></div>
-    <div id="cursor-follower"></div>
-    
-    <!-- Structural Elements -->
-    <div class="axis-line"></div>
-    <div class="grid-bg"></div>
-
-    <div id="root">
-      <div class="initial-loader">
-        <div class="spinner"></div>
-        <p>Initializing Architecture</p>
-      </div>
-    </div>
+    <div id="root"></div>
 
     <!-- Essential Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>

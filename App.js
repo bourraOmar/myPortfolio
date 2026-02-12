@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
-import {
-  Github, Linkedin, Mail, ArrowUpRight,
+import { motion } from 'framer-motion';
+import { 
+  Github, Linkedin, Mail, ArrowUpRight, 
   Code2, Database, Layout, Terminal, ExternalLink,
   ChevronDown
 } from 'lucide-react';
-import {
-  PERSONAL_INFO, SKILLS, EXPERIENCES, PROJECTS, EDUCATION, CERTIFICATIONS
-} from './constants.tsx';
+import { 
+  PERSONAL_INFO, SKILLS, EXPERIENCES, PROJECTS, EDUCATION, CERTIFICATIONS 
+} from './constants.js';
 
 // --- Animation Variants ---
 const fadeInUp = {
@@ -37,7 +37,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <motion.nav
+    <motion.nav 
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.8 }}
@@ -53,8 +53,8 @@ const Navbar = () => {
         <a href="#experience" className="hover:text-white transition-colors">Experience</a>
         <a href="#contact" className="hover:text-white transition-colors">Contact</a>
       </div>
-      <a
-        href={`mailto:${PERSONAL_INFO.email}`}
+      <a 
+        href={`mailto:${PERSONAL_INFO.email}`} 
         className="px-6 py-2 border border-white/20 rounded-full hover:bg-white hover:text-black transition-all duration-300 text-sm font-medium"
       >
         Let's Talk
@@ -74,35 +74,35 @@ const Hero = () => {
 
       <div className="container relative z-10 text-center">
         <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={staggerContainer}
+            initial="hidden"
+            animate="visible"
+            variants={staggerContainer}
         >
-          <motion.p variants={fadeInUp} className="text-accent-primary tracking-[0.2em] text-sm uppercase mb-6 font-medium">
-            Full Stack Developer
-          </motion.p>
-          <motion.h1 variants={fadeInUp} className="text-5xl md:text-8xl font-bold mb-8 leading-tight tracking-tight">
-            Crafting digital <br />
-            <span className="text-gradient">experiences</span> that matter.
-          </motion.h1>
-          <motion.p variants={fadeInUp} className="max-w-xl mx-auto text-gray-400 text-lg mb-12 leading-relaxed">
-            {PERSONAL_INFO.profile}
-          </motion.p>
-
-          <motion.div variants={fadeInUp} className="flex gap-4 justify-center">
-            <a href="#work" className="group flex items-center gap-2 px-8 py-4 bg-white text-black rounded-full font-semibold hover:scale-105 transition-transform">
-              View Work
-              <ChevronDown className="group-hover:translate-y-1 transition-transform" size={18} />
-            </a>
-            <a href="#contact" className="flex items-center gap-2 px-8 py-4 border border-white/20 rounded-full hover:bg-white/10 transition-colors">
-              Contact Me
-            </a>
-          </motion.div>
+            <motion.p variants={fadeInUp} className="text-accent-primary tracking-[0.2em] text-sm uppercase mb-6 font-medium">
+                Full Stack Developer
+            </motion.p>
+            <motion.h1 variants={fadeInUp} className="text-5xl md:text-8xl font-bold mb-8 leading-tight tracking-tight">
+                Crafting digital <br />
+                <span className="text-gradient">experiences</span> that matter.
+            </motion.h1>
+            <motion.p variants={fadeInUp} className="max-w-xl mx-auto text-gray-400 text-lg mb-12 leading-relaxed">
+                {PERSONAL_INFO.profile}
+            </motion.p>
+            
+            <motion.div variants={fadeInUp} className="flex gap-4 justify-center">
+                <a href="#work" className="group flex items-center gap-2 px-8 py-4 bg-white text-black rounded-full font-semibold hover:scale-105 transition-transform">
+                    View Work
+                    <ChevronDown className="group-hover:translate-y-1 transition-transform" size={18} />
+                </a>
+                <a href="#contact" className="flex items-center gap-2 px-8 py-4 border border-white/20 rounded-full hover:bg-white/10 transition-colors">
+                    Contact Me
+                </a>
+            </motion.div>
         </motion.div>
       </div>
-
+      
       {/* Scroll indicator */}
-      <motion.div
+      <motion.div 
         animate={{ y: [0, 10, 0] }}
         transition={{ repeat: Infinity, duration: 2 }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 text-gray-500"
@@ -114,42 +114,42 @@ const Hero = () => {
 };
 
 const TechStack = () => {
-  // Group skills by category
-  const categories = Array.from(new Set(SKILLS.map(s => s.category)));
+    // Group skills by category
+    const categories = Array.from(new Set(SKILLS.map(s => s.category)));
 
-  return (
-    <section className="py-20 border-t border-white/5">
-      <div className="container">
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={staggerContainer}
-          className="grid grid-cols-2 md:grid-cols-4 gap-8"
-        >
-          {categories.map((cat, i) => (
-            <motion.div key={i} variants={fadeInUp} className="space-y-4">
-              <h3 className="text-accent-primary text-sm uppercase tracking-wider">{cat}</h3>
-              <div className="flex flex-wrap gap-2 text-gray-300">
-                {SKILLS.filter(s => s.category === cat).map((skill, j) => (
-                  <span key={j} className="block text-lg font-medium hover:text-white transition-colors cursor-default">
-                    {skill.name}
-                  </span>
-                ))}
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
-    </section>
-  )
+    return (
+        <section className="py-20 border-t border-white/5">
+            <div className="container">
+                <motion.div 
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    variants={staggerContainer}
+                    className="grid grid-cols-2 md:grid-cols-4 gap-8"
+                >
+                    {categories.map((cat, i) => (
+                        <motion.div key={i} variants={fadeInUp} className="space-y-4">
+                            <h3 className="text-accent-primary text-sm uppercase tracking-wider">{cat}</h3>
+                            <div className="flex flex-wrap gap-2 text-gray-300">
+                                {SKILLS.filter(s => s.category === cat).map((skill, j) => (
+                                    <span key={j} className="block text-lg font-medium hover:text-white transition-colors cursor-default">
+                                        {skill.name}
+                                    </span>
+                                ))}
+                            </div>
+                        </motion.div>
+                    ))}
+                </motion.div>
+            </div>
+        </section>
+    )
 }
 
 const Projects = () => {
   return (
     <section id="work" className="section-padding">
       <div className="container">
-        <motion.div
+        <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -161,7 +161,7 @@ const Projects = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {PROJECTS.map((project, index) => (
-            <motion.div
+            <motion.div 
               key={index}
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -170,13 +170,13 @@ const Projects = () => {
               className="group relative bg-[#0a0a0a] border border-white/5 rounded-2xl overflow-hidden hover:border-white/20 transition-colors"
             >
               <div className="aspect-video overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
+                <img 
+                  src={project.image} 
+                  alt={project.title} 
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
               </div>
-
+              
               <div className="p-8">
                 <div className="flex justify-between items-start mb-4">
                   <h3 className="text-2xl font-bold group-hover:text-accent-primary transition-colors">{project.title}</h3>
@@ -184,9 +184,9 @@ const Projects = () => {
                     <Github size={18} />
                   </a>
                 </div>
-
+                
                 <p className="text-gray-400 mb-6 line-clamp-3">{project.description}</p>
-
+                
                 <div className="flex flex-wrap gap-2">
                   {project.tech.map((tech, i) => (
                     <span key={i} className="px-3 py-1 text-xs border border-white/10 rounded-full text-gray-300">
@@ -211,55 +211,55 @@ const Experience = () => {
           <div className="md:w-1/3">
             <h2 className="text-4xl font-bold mb-4 sticky top-32">Experience & Education</h2>
           </div>
-
+          
           <div className="md:w-2/3 space-y-16">
             <div>
-              <h3 className="text-xl font-serif text-accent-primary mb-8 italic">Professional Journey</h3>
-              <div className="space-y-12">
+                <h3 className="text-xl font-serif text-accent-primary mb-8 italic">Professional Journey</h3>
+                <div className="space-y-12">
                 {EXPERIENCES.map((exp, i) => (
-                  <div key={i} className="relative pl-8 border-l border-white/10">
+                    <div key={i} className="relative pl-8 border-l border-white/10">
                     <div className="absolute left-0 top-0 -translate-x-1/2 w-3 h-3 bg-accent-primary rounded-full" />
                     <span className="text-sm text-gray-500 mb-2 block">{exp.period}</span>
                     <h4 className="text-xl font-bold">{exp.title}</h4>
                     <p className="text-gray-400 mb-4">{exp.company} • {exp.location}</p>
                     <ul className="space-y-2">
-                      {exp.description.map((desc, j) => (
+                        {exp.description.map((desc, j) => (
                         <li key={j} className="text-gray-300 text-sm leading-relaxed">• {desc}</li>
-                      ))}
+                        ))}
                     </ul>
-                  </div>
+                    </div>
                 ))}
-              </div>
+                </div>
             </div>
 
             <div>
-              <h3 className="text-xl font-serif text-accent-primary mb-8 italic">Education</h3>
-              <div className="space-y-8">
+                <h3 className="text-xl font-serif text-accent-primary mb-8 italic">Education</h3>
+                <div className="space-y-8">
                 {EDUCATION.map((edu, i) => (
-                  <div key={i} className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-white/5">
-                    <div className="md:w-3/4">
-                      <h4 className="text-lg font-medium">{edu.degree}</h4>
-                      <p className="text-gray-400 text-sm">{edu.institution}</p>
+                    <div key={i} className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-white/5">
+                        <div className="md:w-3/4">
+                            <h4 className="text-lg font-medium">{edu.degree}</h4>
+                            <p className="text-gray-400 text-sm">{edu.institution}</p>
+                        </div>
+                        <span className="text-sm text-gray-500 whitespace-nowrap">{edu.period}</span>
                     </div>
-                    <span className="text-sm text-gray-500 whitespace-nowrap">{edu.period}</span>
-                  </div>
                 ))}
-              </div>
+                </div>
             </div>
 
             <div>
-              <h3 className="text-xl font-serif text-accent-primary mb-8 italic">Certifications</h3>
-              <div className="space-y-4">
+                <h3 className="text-xl font-serif text-accent-primary mb-8 italic">Certifications</h3>
+                <div className="space-y-4">
                 {CERTIFICATIONS.map((cert, i) => (
-                  <div key={i} className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-white/5">
-                    <div>
-                      <h4 className="text-lg font-medium">{cert.title}</h4>
-                      <p className="text-gray-400 text-sm">{cert.issuer}</p>
+                    <div key={i} className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-white/5">
+                        <div>
+                            <h4 className="text-lg font-medium">{cert.title}</h4>
+                            <p className="text-gray-400 text-sm">{cert.issuer}</p>
+                        </div>
+                        <span className="text-sm text-gray-500">{cert.year}</span>
                     </div>
-                    <span className="text-sm text-gray-500">{cert.year}</span>
-                  </div>
                 ))}
-              </div>
+                </div>
             </div>
           </div>
         </div>
@@ -273,11 +273,11 @@ const Footer = () => {
     <footer id="contact" className="py-20 border-t border-white/10">
       <div className="container text-center">
         <h2 className="text-5xl md:text-7xl font-bold mb-8 font-heading">
-          Let's work <br /> <span className="text-gray-500">together.</span>
+          Let's work <br/> <span className="text-gray-500">together.</span>
         </h2>
-
+        
         <div className="flex justify-center gap-6 mb-16">
-          <a
+          <a 
             href={`mailto:${PERSONAL_INFO.email}`}
             className="flex items-center gap-3 px-8 py-4 bg-white text-black rounded-full font-bold hover:scale-105 transition-transform"
           >
@@ -298,7 +298,7 @@ const Footer = () => {
   );
 };
 
-const App: React.FC = () => {
+const App = () => {
   return (
     <div className="app-root text-white min-h-screen selection:bg-accent-primary selection:text-black">
       <Navbar />
