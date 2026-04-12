@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FarmOps Web Demo</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html" style="text-decoration: none; color: var(--text-white);">
+          <i class="fas fa-arrow-left"></i> Back to Portfolio
+        </a>
+      </div>
+    </nav>
+
+    <!-- PROJECT HEADER -->
+    <header class="project-detail-header" style="text-align: center; padding: 50px 10%;">
+      <p class="label">— Case Study</p>
+      <h1 class="main-title" style="font-size: 4rem;">FarmOps <span>Web</span></h1>
+      <p class="hero-desc" style="max-width: 600px; margin: 20px auto;">
+        Solution intelligente de pilotage d'exploitation agricole en temps réel. Naviguez à travers les écrans ci-dessous en scrollant dans l'ordinateur.
+      </p>
+      <div class="tech-stack" style="justify-content: center; margin-top: 20px;">
+        <span>React</span><span>NestJS</span><span>PostgreSQL</span>
+      </div>
+    </header>
+
+    <!-- DEMO SECTION -->
+    <section class="demo-section" style="padding: 50px 10% 100px;">
+      
+      <!-- LAPTOP MOCKUP -->
+      <div class="macbook-mockup">
+        <div class="macbook-screen">
+          <div class="slider-track">
+            <div class="slide"><img src="./img/FarmOps Web/dashboard page.png" alt="Dashboard" /></div>
+            <div class="slide"><img src="./img/FarmOps Web/login page.png" alt="Login" /></div>
+            <div class="slide"><img src="./img/FarmOps Web/farmes page.png" alt="Farms" /></div>
+            <div class="slide"><img src="./img/FarmOps Web/bètail page.png" alt="Betail" /></div>
+            <div class="slide"><img src="./img/FarmOps Web/production page.png" alt="Production" /></div>
+          </div>
+        </div>
+        <div class="macbook-base">
+          <div class="macbook-notch"></div>
+        </div>
+      </div>
+
+      <div class="slider-controls">
+        <button class="slider-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+        <div class="dot-indicators">
+          <div class="dot active"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+        <button class="slider-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+      </div>
+
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
