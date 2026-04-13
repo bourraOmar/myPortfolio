@@ -4,6 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bourra Omar | Portfolio</title>
+    
+    <!-- Preconnect to external services for faster DNS resolution -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    
+    <!-- Preload critical assets like the hero image -->
+    <link rel="preload" as="image" href="img/me.png" />
+    
     <link rel="stylesheet" href="style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
@@ -179,7 +188,7 @@
         <!-- PROJECT 1: FARMOPS WEB (Large Feature) -->
         <div class="project-card large">
           <div class="project-image-wrapper">
-            <img src="./img/FarmOps Web/img1.png" alt="FarmOps Web" />
+            <img src="./img/FarmOps Web/img1.png" alt="FarmOps Web" loading="lazy" decoding="async" />
             <div class="overlay-gradient"></div>
           </div>
           <div class="project-info">
@@ -202,6 +211,8 @@
             <img
               src="./img/FarmsOps Mobile/img2.png"
               alt="FarmOps Mobile"
+              loading="lazy"
+              decoding="async"
             />
             <div class="overlay-gradient"></div>
           </div>
@@ -224,6 +235,8 @@
             <img
               src="./img/Maquettage Desktop/img3.png"
               alt="Auto Rent Pro"
+              loading="lazy"
+              decoding="async"
             />
             <div class="overlay-gradient"></div>
           </div>
