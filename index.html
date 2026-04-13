@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -47,32 +47,38 @@
     <!-- HERO SECTION -->
     <header class="hero">
       <div class="hero-left">
-        <h1 class="main-title">Bourra<br />Omar<span>.</span></h1>
+        <h1 class="main-title">
+          Bourra<br />
+          <span class="gradient-text">Omar</span><span class="dot-accent">.</span>
+        </h1>
         <div class="social-icons">
-          <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
-          <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-          <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-btn" title="GitHub"><i class="fab fa-github"></i></a>
+          <a href="#" class="social-btn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-btn" title="Twitter"><i class="fab fa-twitter"></i></a>
         </div>
       </div>
 
       <div class="hero-center">
-        <!-- Add your photo here -->
-        <img src="img/me.png" alt="Bourra Omar" class="profile-img">
+        <div class="profile-wrapper">
+          <div class="profile-glow"></div>
+          <img src="img/me.png" alt="Bourra Omar" class="profile-img">
+        </div>
       </div>
 
       <div class="hero-right">
-        <p class="label">— Introduction</p>
+        <div class="badge">👋 Web Experience Designer</div>
         <h2 class="sub-headline">
-          Développeur Full Stack, basé à Safi, Maroc.
+          Full Stack Developer, based in Safi, Morocco.
         </h2>
         <p class="hero-desc">
-          Développeur web créatif et motivé, je dispose d'une solide expertise
-          en programmation et d'une grande capacité d'adaptation face aux
-          nouveaux défis.
+          Creative and motivated web developer with solid programming expertise and a strong ability to adapt to new challenges.
         </p>
-        <a href="#" class="my-story"
-          >My story <i class="fas fa-arrow-right"></i
-        ></a>
+        <div class="hero-actions">
+          <a href="#works" class="primary-btn">View my projects</a>
+          <a href="#" class="my-story">
+            My Story <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
       </div>
     </header>
 
@@ -80,35 +86,58 @@
     <section class="about-section">
       <div class="about-contact">
         <p class="label">— Contact</p>
-        <h3>
+        <h3 class="contact-headline">
           Any Type Of Query <br />
           & Discussion.
         </h3>
-        <p class="dim-text">obourra662@gmail.com</p>
-        <br />
-        <a href="mailto:obourra662@gmail.com" class="email-link"
-          >hi@bourra.com <i class="fas fa-arrow-right"></i
-        ></a>
+        <p class="dim-text mb-4">Let's talk about your next project.</p>
+        
+        <a href="mailto:obourra662@gmail.com" class="contact-card">
+          <div class="contact-icon"><i class="far fa-envelope"></i></div>
+          <div class="contact-info">
+            <span class="contact-label">Email Me At</span>
+            <span class="contact-value">obourra662@gmail.com</span>
+          </div>
+          <i class="fas fa-external-link-alt arrow"></i>
+        </a>
       </div>
 
       <div class="about-quote">
-        <p class="big-quote">
-          "Vous ne pouvez pas épuiser la créativité, plus vous l'utilisez, plus
-          vous en avez dans votre esprit signifiant."
-        </p>
-        <div class="stats">
-          <div class="stat-item">
-            <span class="stat-num">02</span>
+        <div class="quote-wrapper">
+          <i class="fas fa-quote-left quote-icon"></i>
+          <p class="big-quote">
+            "You can't use up creativity. The more you use, the more you have."
+          </p>
+        </div>
+        
+        <div class="stats-container">
+          <div class="stat-box">
+            <div class="stat-num-wrapper">
+              <span class="stat-num">02</span>
+              <span class="stat-plus">+</span>
+            </div>
             <p class="stat-desc">
-              Years of <br />
-              Experience.
+              Years of<br />Experience.
             </p>
           </div>
-          <div class="stat-item">
-            <span class="stat-num">18</span>
+          <div class="stat-divider"></div>
+          <div class="stat-box">
+            <div class="stat-num-wrapper">
+              <span class="stat-num">18</span>
+              <span class="stat-plus">+</span>
+            </div>
             <p class="stat-desc">
-              Projects <br />
-              Completed.
+              Projects<br />Completed.
+            </p>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-box">
+            <div class="stat-num-wrapper">
+              <span class="stat-num">100</span>
+              <span class="stat-plus">%</span>
+            </div>
+            <p class="stat-desc">
+              Creative<br />Commitment.
             </p>
           </div>
         </div>
@@ -159,8 +188,7 @@
             </div>
             <h3>FarmOps Dashboard</h3>
             <p>
-              Solution intelligente de pilotage d'exploitation agricole en temps
-              réel.
+              Intelligent real-time farm management solution.
             </p>
             <a href="farmops-web.html" class="project-link"
               >View Case Study <i class="fas fa-external-link-alt"></i
@@ -182,7 +210,7 @@
               <span>React Native</span><span>Expo</span>
             </div>
             <h3>FarmOps Mobile</h3>
-            <p>La gestion agricole dans votre poche.</p>
+            <p>Farm management right in your pocket.</p>
             <br>
             <a href="farmops-mobile.html" class="project-link"
               >View Interactive Demo <i class="fas fa-external-link-alt"></i
@@ -205,7 +233,7 @@
             </div>
             <h3>Auto Rent Pro</h3>
             <p>
-              Plateforme complète de location et gestion de flotte automobile.
+              Complete car rental and fleet management platform.
             </p>
             <a href="auto-rent-pro.html" class="project-link"
               >Live Demo <i class="fas fa-chevron-right"></i
@@ -216,23 +244,45 @@
     </section>
 
     <!-- FOOTER / CONTACT -->
-    <footer class="footer">
-      <div class="footer-contact">
-        <h2>Got a project?<br />Let's talk.</h2>
-        <a href="#" class="email-link"
-          >hi@bourra.com <i class="fas fa-arrow-right"></i
-        ></a>
-      </div>
-      <div class="footer-form">
-        <p>Estimate your project?<br />Let me know here.</p>
-        <form>
-          <input type="text" placeholder="What's your name?" />
-          <input type="email" placeholder="Your fancy email" />
-          <div class="form-bottom">
-            <input type="text" placeholder="Tell me about your project" />
-            <button type="button">📎 <i class="fas fa-arrow-right"></i></button>
+    <footer class="footer" id="contact">
+      <div class="footer-content">
+        <div class="footer-cta">
+          <p class="label">— Let's Collaborate</p>
+          <h2 class="footer-title">Got a project?<br />Let's build it <span class="gradient-text">together</span>.</h2>
+          <p class="footer-desc">
+            I'm currently available for freelance work and open to new opportunities. Whether you have a specific idea in mind or just want to explore possibilities, I'd love to hear from you.
+          </p>
+          
+          <div class="footer-direct-contact">
+            <a href="mailto:obourra662@gmail.com" class="direct-email">
+              <i class="far fa-envelope"></i> obourra662@gmail.com
+            </a>
+            <div class="social-icons" style="margin-top: 20px;">
+              <a href="#" class="social-btn" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" class="social-btn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" class="social-btn" title="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
           </div>
-        </form>
+        </div>
+
+        <div class="footer-form-wrapper" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 60px 40px;">
+          <div class="cv-icon" style="font-size: 3.5rem; color: var(--accent); margin-bottom: 20px;">
+            <i class="far fa-file-pdf"></i>
+          </div>
+          <div class="form-header" style="margin-bottom: 30px;">
+            <h3 style="font-size: 2rem;">Download My Resume</h3>
+            <p style="font-size: 1.05rem;">Get a detailed overview of my experience, skills, and educational background.</p>
+          </div>
+          
+          <a href="img/Omar BOURRA CV.pdf" download="Omar_BOURRA_CV.pdf" class="submit-btn" style="width: 100%; max-width: 300px; padding: 20px; font-size: 1.1rem; text-decoration: none;">
+            Download CV <i class="fas fa-download" style="margin-left: 10px;"></i>
+          </a>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2024 Bourra Omar. All rights reserved.</p>
+        <p>Built with <i class="fas fa-heart" style="color: var(--accent);"></i> & caffeine.</p>
       </div>
     </footer>
 

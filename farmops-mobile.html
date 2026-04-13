@@ -29,7 +29,7 @@
       <p class="label">— Case Study</p>
       <h1 class="main-title" style="font-size: 4rem;">FarmOps <span>Mobile</span></h1>
       <p class="hero-desc" style="max-width: 600px; margin: 20px auto;">
-        La gestion agricole dans votre poche. Scrollez dans le téléphone pour voir l'application.
+        La gestion agricole dans votre poche. Naviguez avec le menu de l'application.
       </p>
       <div class="tech-stack" style="justify-content: center; margin-top: 20px;">
         <span>React Native</span><span>Expo</span>
@@ -40,29 +40,394 @@
     <section class="demo-section" style="padding: 50px 10% 100px;">
       
       <!-- SMARTPHONE MOCKUP -->
-      <div class="smartphone-mockup">
-        <div class="smartphone-screen">
-          <div class="slider-track">
-            <div class="slide"><img src="./img/FarmsOps Mobile/home page.png" alt="Home" /></div>
-            <div class="slide"><img src="./img/FarmsOps Mobile/farm page.png" alt="Farm" /></div>
-            <div class="slide"><img src="./img/FarmsOps Mobile/herd page.png" alt="Herd" /></div>
-            <div class="slide"><img src="./img/FarmsOps Mobile/profile page.png" alt="Profile" /></div>
-          </div>
-        </div>
-      </div>
+      <div class="smartphone-mockup" style="position: relative;">
+        <div class="smartphone-screen" id="app-screen">
+          
+          <!-- Screens Container -->
+          <div class="app-screens" id="screens-container" style="background: #061108; font-family: 'Inter', sans-serif;">
+            
+            <!-- ====== Script for Mock Data (just helpers) ====== -->
+            <style>
+              .app-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+              .app-title { font-size: 1.5rem; font-weight: 700; color: #ffffff; margin: 0; }
+              .app-subtitle { color: #8fa391; font-size: 0.875rem; margin: 5px 0 0; }
+              .app-icon-btn { width: 40px; height: 40px; border-radius: 50%; display: flex; justify-content: center; align-items: center; color: #ffffff; }
+              .app-card { background: #0d1e11; border-radius: 16px; padding: 16px; margin-bottom: 16px; }
+              .app-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
+              .app-stat-card { background: #0d1e11; color: white; padding: 16px; border-radius: 16px; position: relative; }
+              .app-stat-card .stat-icon { width: 36px; height: 36px; border-radius: 10px; display: flex; justify-content: center; align-items: center; margin-bottom: 12px; }
+              
+              .app-stat-card h3 { font-size: 1.5rem; margin: 0 0 4px; font-weight: 700; color: #ffffff; }
+              .app-stat-card p { font-size: 0.8rem; margin: 0; color: #8fa391; }
+              
+              .app-list-item { display: flex; align-items: center; gap: 15px; }
+              .app-list-icon { width: 40px; height: 40px; border-radius: 10px; display: flex; justify-content: center; align-items: center; font-size: 1.2rem; }
+              .app-list-content { flex: 1; }
+              .app-list-title { font-size: 0.95rem; margin: 0 0 4px; color: #ffffff; font-weight: 600; }
+              .app-list-desc { font-size: 0.8rem; margin: 0; color: #8fa391; }
+              
+              .app-section-title { font-size: 1.1rem; color: #ffffff; margin: 0 0 12px; font-weight: 700; }
+              
+              .btn-primary { background: #0ce838; color: #061108; font-weight: 700; border: none; border-radius: 10px; padding: 14px; width: 100%; font-size: 1rem; display: flex; justify-content: center; align-items: center; gap: 8px; cursor: pointer;}
+              .btn-logout { background: #1f0b0f; color: #ff4a4a; font-weight: 600; border: none; border-radius: 10px; padding: 12px; width: 100%; display: flex; justify-content: center; align-items: center; gap: 8px; cursor: pointer; }
+              
+              .input-group { margin-bottom: 15px; }
+              .input-label { display: block; color: #ffffff; font-size: 0.85rem; margin-bottom: 6px; font-weight: 500; }
+              .input-field { width: 100%; background: #0b1a0e; border: 1px solid #1c3620; border-radius: 10px; padding: 12px; color: #ffffff; }
+              
+              .bottom-nav { background: #061108 !important; border-top: 1px solid #112815 !important; }
+              .nav-item { color: #8fa391 !important; }
+              .nav-item.active { color: #0ce838 !important; }
+              
+              .photo-placeholder { width: 100px; height: 100px; border-radius: 50%; border: 2px dashed #3a5c41; display: flex; flex-direction: column; justify-content: center; align-items: center; margin: 0 auto; color: #8fa391; }
+              
+              /* Scrollbar dark */
+              .app-screens::-webkit-scrollbar { width: 4px; }
+              .app-screens::-webkit-scrollbar-thumb { background: #1c3620; border-radius: 4px; }
+            </style>
 
-      <div class="slider-controls">
-        <button class="slider-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
-        <div class="dot-indicators">
-          <div class="dot active"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
+            <!-- Screen 1: Home -->
+            <div class="app-screen active" id="screen-home" style="padding: 20px;">
+              <div class="app-header">
+                <div>
+                  <h2 class="app-title">Hello, talisse 👋</h2>
+                  <p class="app-subtitle">Overview of all your farms</p>
+                </div>
+              </div>
+
+              <div class="app-grid">
+                <div class="app-stat-card">
+                  <div class="stat-icon" style="background: rgba(245, 158, 11, 0.1); color: #f59e0b;"><i class="fas fa-warehouse"></i></div>
+                  <h3>2</h3>
+                  <p>Total Farms</p>
+                </div>
+                <div class="app-stat-card">
+                  <div class="stat-icon" style="background: rgba(16, 185, 129, 0.1); color: #10b981;"><i class="fas fa-paw"></i></div>
+                  <h3>5</h3>
+                  <p>Total Animals</p>
+                </div>
+                <div class="app-stat-card">
+                  <div class="stat-icon" style="background: rgba(59, 130, 246, 0.1); color: #3b82f6;"><i class="fas fa-user-friends"></i></div>
+                  <h3>5</h3>
+                  <p>Total Workers</p>
+                </div>
+                <div class="app-stat-card">
+                  <div class="stat-icon" style="background: rgba(14, 165, 233, 0.1); color: #0ea5e9;"><i class="fas fa-tint"></i></div>
+                  <h3>0.0L</h3>
+                  <p>Milk Today</p>
+                </div>
+              </div>
+
+              <h3 class="app-section-title">Monthly Summary</h3>
+              <div class="app-card" style="display: flex; justify-content: space-between; align-items: center;">
+                <div style="display: flex; gap: 10px; align-items: center; color: #8fa391; font-size: 0.85rem;">
+                  <i class="fas fa-arrow-trend-up" style="color: #0ce838;"></i>
+                  <span>Total Milk This Month</span>
+                </div>
+                <div style="font-size: 1.2rem; font-weight: 700; color: #0ce838;">0.0 L</div>
+              </div>
+
+              <h3 class="app-section-title">Farm Breakdown</h3>
+              <!-- Farm 1 -->
+              <div class="app-card" style="padding: 16px 16px 10px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                  <div style="display: flex; gap: 12px; align-items: center;">
+                    <div class="stat-icon" style="width: 32px; height: 32px; border-radius: 8px; background: rgba(12, 232, 56, 0.1); color: #0ce838; display: flex; justify-content: center; align-items: center;"><i class="fas fa-warehouse"></i></div>
+                    <span style="color: white; font-weight: 600;">Mostapha's farm</span>
+                  </div>
+                  <i class="fas fa-chevron-right" style="color: #8fa391; font-size: 0.8rem;"></i>
+                </div>
+                <div style="display: flex; justify-content: space-between; text-align: center; border-top: 1px solid #1c3620; padding-top: 10px;">
+                  <div>
+                    <div style="color: white; font-weight: 700; font-size: 1.1rem;">3</div>
+                    <div style="color: #8fa391; font-size: 0.65rem; letter-spacing: 1px;">ANIMALS</div>
+                  </div>
+                  <div style="border-left: 1px solid #1c3620; border-right: 1px solid #1c3620; padding: 0 20px;">
+                    <div style="color: white; font-weight: 700; font-size: 1.1rem;">2</div>
+                    <div style="color: #8fa391; font-size: 0.65rem; letter-spacing: 1px;">WORKERS</div>
+                  </div>
+                  <div>
+                    <div style="color: white; font-weight: 700; font-size: 1.1rem;">0.0L</div>
+                    <div style="color: #8fa391; font-size: 0.65rem; letter-spacing: 1px;">MILK TODAY</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Farm 2 -->
+              <div class="app-card" style="padding: 16px 16px 10px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                  <div style="display: flex; gap: 12px; align-items: center;">
+                    <div class="stat-icon" style="width: 32px; height: 32px; border-radius: 8px; background: rgba(12, 232, 56, 0.1); color: #0ce838; display: flex; justify-content: center; align-items: center;"><i class="fas fa-warehouse"></i></div>
+                    <span style="color: white; font-weight: 600;">Omar's farms</span>
+                  </div>
+                  <i class="fas fa-chevron-right" style="color: #8fa391; font-size: 0.8rem;"></i>
+                </div>
+                <div style="display: flex; justify-content: space-between; text-align: center; border-top: 1px solid #1c3620; padding-top: 10px;">
+                  <div>
+                    <div style="color: white; font-weight: 700; font-size: 1.1rem;">2</div>
+                    <div style="color: #8fa391; font-size: 0.65rem; letter-spacing: 1px;">ANIMALS</div>
+                  </div>
+                  <div style="border-left: 1px solid #1c3620; border-right: 1px solid #1c3620; padding: 0 20px;">
+                    <div style="color: white; font-weight: 700; font-size: 1.1rem;">3</div>
+                    <div style="color: #8fa391; font-size: 0.65rem; letter-spacing: 1px;">WORKERS</div>
+                  </div>
+                  <div>
+                    <div style="color: white; font-weight: 700; font-size: 1.1rem;">0.0L</div>
+                    <div style="color: #8fa391; font-size: 0.65rem; letter-spacing: 1px;">MILK TODAY</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Screen 2: Farm Details ( replacing "My Farms" ) -->
+            <div class="app-screen" id="screen-farm" style="padding: 20px;">
+              <div class="app-header" style="justify-content: flex-start; gap: 20px; align-items: flex-start;">
+                <i class="fas fa-arrow-left" style="color: white; margin-top: 5px;"></i>
+                <div style="text-align: center; flex: 1; padding-right: 30px;">
+                  <h2 class="app-title" style="font-size: 1.2rem;">Mostapha's farm</h2>
+                  <p class="app-subtitle" style="font-size: 0.75rem;"><i class="fas fa-map-marker-alt"></i> Casablanca</p>
+                </div>
+              </div>
+
+              <div class="app-card" style="display: flex; align-items: center; gap: 15px;">
+                 <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(12, 232, 56, 0.1); color: #0ce838; display: flex; justify-content: center; align-items: center; font-size: 1.5rem;"><i class="fas fa-warehouse"></i></div>
+                 <div>
+                   <div style="color: white; font-weight: 600; font-size: 1.1rem;">Mostapha's farm</div>
+                   <div style="color: #8fa391; font-size: 0.8rem;">120 hectares</div>
+                 </div>
+              </div>
+
+              <div class="app-grid">
+                <div class="app-stat-card">
+                  <div class="stat-icon" style="background: rgba(16, 185, 129, 0.1); color: #10b981;"><i class="fas fa-paw"></i></div>
+                  <h3>3</h3>
+                  <p>Animals</p>
+                </div>
+                <div class="app-stat-card">
+                  <div class="stat-icon" style="background: rgba(59, 130, 246, 0.1); color: #3b82f6;"><i class="fas fa-user-friends"></i></div>
+                  <h3>2</h3>
+                  <p>Workers</p>
+                </div>
+                <div class="app-stat-card">
+                  <div class="stat-icon" style="background: rgba(14, 165, 233, 0.1); color: #0ea5e9;"><i class="fas fa-tint"></i></div>
+                  <h3>0.0L</h3>
+                  <p>Milk Today</p>
+                </div>
+                <div class="app-stat-card">
+                  <div class="stat-icon" style="background: rgba(245, 158, 11, 0.1); color: #f59e0b;"><i class="fas fa-arrow-trend-up"></i></div>
+                  <h3>0.0L</h3>
+                  <p>This Month</p>
+                </div>
+              </div>
+
+              <h3 class="app-section-title">Quick Actions</h3>
+              
+              <!-- Action 1 -->
+              <div class="app-card app-list-item" style="cursor: pointer;" onclick="switchTab('add-animal', document.getElementById('nav-herd'))">
+                <div class="app-list-icon" style="background: rgba(12, 232, 56, 0.1); color: #0ce838;"><i class="fas fa-plus"></i></div>
+                <div class="app-list-content">
+                  <h4 class="app-list-title">Add Animal</h4>
+                  <p class="app-list-desc">Register new livestock to this farm</p>
+                </div>
+                <i class="fas fa-chevron-right" style="color:#8fa391; font-size:0.8rem;"></i>
+              </div>
+              <!-- Action 2 -->
+              <div class="app-card app-list-item">
+                <div class="app-list-icon" style="background: rgba(14, 165, 233, 0.1); color: #0ea5e9;"><i class="fas fa-tint"></i></div>
+                <div class="app-list-content">
+                  <h4 class="app-list-title">Log Milk</h4>
+                  <p class="app-list-desc">Record milk production</p>
+                </div>
+                <i class="fas fa-chevron-right" style="color:#8fa391; font-size:0.8rem;"></i>
+              </div>
+              <!-- Action 3 -->
+              <div class="app-card app-list-item">
+                <div class="app-list-icon" style="background: rgba(59, 130, 246, 0.1); color: #3b82f6;"><i class="fas fa-user-friends"></i></div>
+                <div class="app-list-content">
+                  <h4 class="app-list-title">Add Worker</h4>
+                  <p class="app-list-desc">Register new staff to this farm</p>
+                </div>
+                <i class="fas fa-chevron-right" style="color:#8fa391; font-size:0.8rem;"></i>
+              </div>
+            </div>
+
+            <!-- Screen 3: Add New Animal  -->
+            <div class="app-screen" id="screen-add-animal" style="padding: 20px;">
+              <div class="app-header" style="justify-content: flex-start; gap: 20px;">
+                <i class="fas fa-times" style="color: #8fa391; font-size: 1.2rem; cursor: pointer;" onclick="switchTab('farm', document.getElementById('nav-farm'))"></i>
+                <h2 class="app-title" style="font-size: 1.2rem; margin-left: 20px;">Add New Animal</h2>
+              </div>
+              
+              <div style="text-align: center; margin: 20px 0 30px;">
+                <div class="photo-placeholder">
+                  <i class="fas fa-camera" style="font-size: 1.5rem; margin-bottom: 5px;"></i>
+                  <span style="font-size: 0.65rem; font-weight: 600;">ADD PHOTO</span>
+                </div>
+                <p style="color: #8fa391; font-size: 0.8rem; margin-top: 15px;">Tap to take a clear picture of<br>the animal face or tag.</p>
+              </div>
+
+              <div class="input-group">
+                <label class="input-label">Animal Name <span style="color: #ef4444;">*</span></label>
+                <div style="position: relative;">
+                  <input type="text" class="input-field" placeholder="e.g., Bessie" style="padding-right: 40px;" />
+                  <i class="fas fa-paw" style="position: absolute; right: 15px; top: 15px; color: #8fa391;"></i>
+                </div>
+              </div>
+
+              <div class="input-group">
+                <label class="input-label">Tag ID</label>
+                <div style="position: relative;">
+                  <input type="text" class="input-field" value="000004" style="padding-right: 40px;" />
+                  <i class="fas fa-tag" style="position: absolute; right: 15px; top: 15px; color: #8fa391;"></i>
+                </div>
+              </div>
+
+              <div class="input-group">
+                <label class="input-label">Breed</label>
+                <div style="position: relative;">
+                  <select class="input-field" style="appearance: none; padding-right: 40px;">
+                    <option>Select Breed</option>
+                  </select>
+                  <i class="fas fa-chevron-down" style="position: absolute; right: 15px; top: 15px; color: #8fa391;"></i>
+                </div>
+              </div>
+
+              <div class="input-group">
+                <label class="input-label">Gender</label>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                  <div style="background: #0b1a0e; border: 1px solid #1c3620; border-radius: 10px; padding: 15px; text-align: center; color: #8fa391;">
+                    <i class="fas fa-mars" style="font-size: 1.2rem; margin-bottom: 5px; display: block;"></i>
+                    <span style="font-size: 0.85rem;">Male</span>
+                  </div>
+                  <div style="background: #061108; border: 1px solid #0ce838; border-radius: 10px; padding: 15px; text-align: center; color: #0ce838;">
+                    <i class="fas fa-venus" style="font-size: 1.2rem; margin-bottom: 5px; display: block;"></i>
+                    <span style="font-size: 0.85rem;">Female</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="input-group">
+                <label class="input-label">Date of Birth</label>
+                <div style="position: relative;">
+                  <input type="text" class="input-field" placeholder="MM/DD/YYYY" style="padding-right: 40px;" />
+                  <i class="far fa-calendar-alt" style="position: absolute; right: 15px; top: 15px; color: #8fa391;"></i>
+                </div>
+              </div>
+              
+              <div class="input-group">
+                <label class="input-label">Weight (kg)</label>
+                <div style="position: relative;">
+                  <input type="text" class="input-field" placeholder="e.g., 650" style="padding-right: 40px;" />
+                  <i class="fas fa-dumbbell" style="position: absolute; right: 15px; top: 15px; color: #8fa391;"></i>
+                </div>
+              </div>
+
+              <button class="btn-primary" style="margin-top: 20px;"><i class="fas fa-check-circle"></i> Register Animal</button>
+              <div style="height: 30px;"></div>
+            </div>
+
+            <!-- Screen 4: Profile -->
+            <div class="app-screen" id="screen-profile" style="padding: 20px;">
+              <h2 class="app-title" style="margin-bottom: 30px;">My Profile</h2>
+              
+              <div style="text-align: center; margin-bottom: 30px;">
+                <div style="width: 90px; height: 90px; border-radius: 50%; background: #0ce838; color: #061108; display: flex; justify-content: center; align-items: center; font-size: 2.5rem; font-weight: 700; margin: 0 auto; position: relative;">
+                  T
+                  <div style="position: absolute; bottom: 0; right: 0; background: #0ce838; border: 3px solid #061108; border-radius: 50%; width: 26px; height: 26px; display: flex; justify-content: center; align-items: center; color: #061108; font-size: 0.6rem;">
+                    <i class="fas fa-check"></i>
+                  </div>
+                </div>
+                <h2 class="app-title" style="font-size: 1.3rem; margin-top: 15px;">talisse</h2>
+                <p class="app-subtitle" style="color: #0ce838; font-weight: 600;">Farm Owner</p>
+              </div>
+
+              <div class="app-card" style="display: flex; justify-content: space-between; text-align: center; padding: 20px;">
+                <div style="flex: 1;">
+                  <div style="color: white; font-weight: 700; font-size: 1.1rem;">2</div>
+                  <div style="color: #8fa391; font-size: 0.65rem; letter-spacing: 1px; margin-top: 5px;">FARMS</div>
+                </div>
+                <div style="flex: 1; border-left: 1px solid #1c3620; border-right: 1px solid #1c3620;">
+                  <div style="color: white; font-weight: 700; font-size: 1.1rem;">5</div>
+                  <div style="color: #8fa391; font-size: 0.65rem; letter-spacing: 1px; margin-top: 5px;">ANIMALS</div>
+                </div>
+                <div style="flex: 1;">
+                  <div style="color: white; font-weight: 700; font-size: 1.1rem;">5</div>
+                  <div style="color: #8fa391; font-size: 0.65rem; letter-spacing: 1px; margin-top: 5px;">WORKERS</div>
+                </div>
+              </div>
+
+              <h3 class="app-section-title" style="font-size: 0.8rem; color: #8fa391; text-transform: uppercase; letter-spacing: 1px; margin-top: 25px;">Account</h3>
+              <div class="app-card app-list-item">
+                <div class="app-list-icon" style="background: rgba(12, 232, 56, 0.1); color: #0ce838;"><i class="far fa-user"></i></div>
+                <div class="app-list-content">
+                  <h4 class="app-list-title" style="font-weight: 500;">Personal Information</h4>
+                  <p class="app-list-desc">Edit your details</p>
+                </div>
+                <i class="fas fa-chevron-right" style="color:#8fa391; font-size:0.8rem;"></i>
+              </div>
+
+              <h3 class="app-section-title" style="font-size: 0.8rem; color: #8fa391; text-transform: uppercase; letter-spacing: 1px; margin-top: 25px;">Support</h3>
+              <div class="app-card app-list-item">
+                <div class="app-list-icon" style="background: rgba(12, 232, 56, 0.1); color: #0ce838;"><i class="far fa-question-circle"></i></div>
+                <div class="app-list-content">
+                  <h4 class="app-list-title" style="font-weight: 500;">Help & Support</h4>
+                </div>
+                <i class="fas fa-chevron-right" style="color:#8fa391; font-size:0.8rem;"></i>
+              </div>
+              <div class="app-card app-list-item">
+                <div class="app-list-icon" style="background: rgba(12, 232, 56, 0.1); color: #0ce838;"><i class="fas fa-info-circle"></i></div>
+                <div class="app-list-content">
+                  <h4 class="app-list-title" style="font-weight: 500;">About App</h4>
+                  <p class="app-list-desc">Version 1.0.0</p>
+                </div>
+                <i class="fas fa-chevron-right" style="color:#8fa391; font-size:0.8rem;"></i>
+              </div>
+
+              <button class="btn-logout" style="margin-top: 30px;"><i class="fas fa-sign-out-alt"></i> Log Out</button>
+              <div style="height: 20px;"></div>
+            </div>
+          </div>
+
+          <!-- Bottom Navigation Bar -->
+          <nav class="bottom-nav">
+            <button id="nav-home" class="nav-item active" onclick="switchTab('home', this)">
+              <i class="fas fa-seedling"></i>
+              <span>Home</span>
+            </button>
+            <button id="nav-farm" class="nav-item" onclick="switchTab('farm', this)">
+              <i class="fas fa-warehouse"></i>
+              <span>Farms</span>
+            </button>
+            <button id="nav-profile" class="nav-item" onclick="switchTab('profile', this)">
+              <i class="far fa-user"></i>
+              <span>Profile</span>
+            </button>
+          </nav>
         </div>
-        <button class="slider-btn next-btn"><i class="fas fa-chevron-right"></i></button>
       </div>
 
     </section>
+
+    <!-- Inline Script for App Demo -->
+    <script>
+      function switchTab(tabId, btn) {
+        // 1. Remove active class from all screens
+        document.querySelectorAll('.app-screen').forEach(screen => {
+          screen.classList.remove('active');
+        });
+        
+        // 2. Add active class to selected screen
+        document.getElementById('screen-' + tabId).classList.add('active');
+
+        // 3. Update nav buttons state (if btn is provided)
+        if(btn) {
+          document.querySelectorAll('.nav-item').forEach(item => {
+            item.classList.remove('active');
+          });
+          btn.classList.add('active');
+        }
+      }
+    </script>
 
     <script src="script.js"></script>
   </body>
