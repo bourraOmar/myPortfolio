@@ -15,7 +15,7 @@
     
     <link rel="stylesheet" href="style.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Cairo:wght@400;600;800&display=swap"
       rel="stylesheet"
     />
     <link
@@ -46,11 +46,24 @@
           />
         </svg>
       </div>
-      <ul class="nav-links">
-        <li><a href="#" class="active">Services</a></li>
-        <li><a href="#">Works</a></li>
-        <li><a href="#">Blog</a></li>
-      </ul>
+      <div class="nav-right" style="display: flex; align-items: center; gap: 30px;">
+        <ul class="nav-links">
+          <li><a href="#" class="active">Services</a></li>
+          <li><a href="#">Works</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+        
+        <div class="lang-dropdown">
+          <button class="lang-btn" id="langBtn">
+            <i class="fas fa-globe"></i> <span id="currentLang">FR</span> <i class="fas fa-chevron-down" style="font-size: 0.7rem;"></i>
+          </button>
+          <div class="lang-menu" id="langMenu">
+            <a href="#" data-lang="fr" class="active">Français</a>
+            <a href="#" data-lang="en">English</a>
+            <a href="#" data-lang="ar">العربية</a>
+          </div>
+        </div>
+      </div>
     </nav>
 
     <!-- HERO SECTION -->
@@ -84,7 +97,7 @@
         </p>
         <div class="hero-actions">
           <a href="#works" class="primary-btn">View my projects</a>
-          <a href="#" class="my-story">
+          <a href="#about" class="my-story">
             My Story <i class="fas fa-arrow-right"></i>
           </a>
         </div>
@@ -92,7 +105,7 @@
     </header>
 
     <!-- STATS & ABOUT SECTION -->
-    <section class="about-section">
+    <section class="about-section"> 
       <div class="about-contact">
         <p class="label">— Contact</p>
         <h3 class="contact-headline">
@@ -172,6 +185,369 @@
       </div>
     </section>
 
+    <!-- ABOUT ME SECTION -->
+    <section class="about-me" id="about">
+      <div class="portfolio-title" style="margin-bottom: 50px;">
+        <p class="label">— Discovery</p>
+        <h2 style="font-size: 3.5rem; line-height: 1.1;">À Propos de <span class="gradient-text">Moi</span><span class="dot-accent">.</span></h2>
+      </div>
+      <div class="about-me-container">
+        <div class="about-me-text">
+          <p>
+            Je suis un Développeur Full Stack Java passionné par la création d'applications web modernes. Actuellement étudiant à <span class="highlight-text">YouCode – UM6P Safi</span>, j'ai développé de solides compétences en développement front-end et back-end.
+          </p>
+          <p>
+            Lors de mon stage chez <span class="highlight-text">ASPS Agadir</span>, j'ai développé une application web complète pour moderniser la gestion interne de l'association, créant une plateforme visiteur et un tableau de bord administrateur avec React.js et Express.js, contribuant à un projet à impact social.
+          </p>
+          <p>
+            J'ai réalisé des projets comme <strong>Salefni</strong> - Solution de Simulation et Gestion des Crédits en Ligne, une application web développée permettant aux visiteurs de simuler différents types de crédits et d’envoyer leurs demandes de financement en ligne.
+          </p>
+        </div>
+        <div class="about-me-card">
+          <div class="about-me-info-block">
+            <h4 class="about-me-label">LANGUES</h4>
+            <div class="about-me-value">Arabe, Français, Anglais</div>
+          </div>
+          <div class="about-me-info-block">
+            <h4 class="about-me-label">LOCALISATION</h4>
+            <div class="about-me-value">Maroc</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section class="education" id="education">
+      <div class="portfolio-title" style="margin-bottom: 50px; text-align: center;">
+        <p class="label">— Parcours</p>
+        <h2 style="font-size: 3.5rem; line-height: 1.1;">Diplômes et <span class="gradient-text">Formation</span><span class="dot-accent">.</span></h2>
+      </div>
+      
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2024 - 2026</span>
+            <h3 class="timeline-title">Formation de Développement Web Full Stack</h3>
+            <p class="timeline-school">YouCode - Safi (UM6P)</p>
+            <p class="timeline-desc">Formation intensive axée sur la pratique (pédagogie active), couvrant l'ensemble du cycle de développement d'applications web (Front-end & Back-end).</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2021 - 2023</span>
+            <h3 class="timeline-title">Sciences Mathématiques et Informatique</h3>
+            <p class="timeline-school">Faculté Polydisciplinaire Cadi Ayyad de Safi</p>
+            <p class="timeline-desc">Formation universitaire approfondie en algèbre, analyse et en informatique fondamentale.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2019 - 2021</span>
+            <h3 class="timeline-title">Diplôme de qualification en Informatique</h3>
+            <p class="timeline-school">Centre Informatique Nouvelle Ville - Safi</p>
+            <p class="timeline-desc">Acquisition des bases techniques, de la maîtrise des outils informatiques et du développement de systèmes d'information.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2018 - 2019</span>
+            <h3 class="timeline-title">Baccalauréat Professionnel en Maintenance Industrielle</h3>
+            <p class="timeline-school">Lycée El Khawarizmi</p>
+            <p class="timeline-desc">Obtention du baccalauréat avec spécialisation en ingénierie et systèmes de maintenance industrielle.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS SECTION -->
+    <section class="certifications-section" id="certifications">
+      <div class="portfolio-title" style="margin-bottom: 50px; text-align: center;">
+        <p class="label">— Validations</p>
+        <h2 style="font-size: 3.5rem; line-height: 1.1;">Mes <span class="gradient-text">Certifications</span><span class="dot-accent">.</span></h2>
+      </div>
+      
+      <div class="cert-grid">
+        <div class="cert-card">
+          <div class="cert-header">
+            <div class="cert-icon"><i class="fab fa-wordpress"></i></div>
+            <div class="cert-info">
+              <h3 class="cert-title">Création des site web avec WordPress</h3>
+              <p class="cert-issuer">Edraak</p>
+            </div>
+          </div>
+          <div class="cert-meta">
+            <span class="cert-year">2023</span>
+            <span class="cert-badge">VERIFIED</span>
+          </div>
+          <button onclick="openCertModal('img/cert-wordpress.png')" class="cert-btn">
+            Aperçu du certificat <i class="fas fa-expand"></i>
+          </button>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-header">
+            <div class="cert-icon"><i class="fas fa-pen-nib"></i></div>
+            <div class="cert-info">
+              <h3 class="cert-title">Conception de l’expérience utilisateur (UX)</h3>
+              <p class="cert-issuer">Edraak</p>
+            </div>
+          </div>
+          <div class="cert-meta">
+            <span class="cert-year">2023</span>
+            <span class="cert-badge">VERIFIED</span>
+          </div>
+          <button onclick="openCertModal('img/cert-ux.png')" class="cert-btn">
+            Aperçu du certificat <i class="fas fa-expand"></i>
+          </button>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-header">
+            <div class="cert-icon"><i class="fab fa-python"></i></div>
+            <div class="cert-info">
+              <h3 class="cert-title">Introduction à la programmation à l’aide de Python</h3>
+              <p class="cert-issuer">Edraak</p>
+            </div>
+          </div>
+          <div class="cert-meta">
+            <span class="cert-year">2023</span>
+            <span class="cert-badge">VERIFIED</span>
+          </div>
+          <button onclick="openCertModal('img/cert-python.png')" class="cert-btn">
+            Aperçu du certificat <i class="fas fa-expand"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECHNOLOGIES SECTION -->
+    <section class="technologies" id="technologies">
+      <div class="tech-header">
+        <p class="tech-label">— Outils & Technologies</p>
+        <h2 class="tech-title">Technologies <span class="gradient-text">que j'utilise</span><span class="dot-accent">.</span></h2>
+        <p class="tech-subtitle">Ma boîte à outils technique pour créer des applications évolutives.</p>
+      </div>
+
+      <!-- Infinite Scrolling Marquee -->
+      <div class="marquee-wrapper">
+        <!-- ROW 1 : Front-End -->
+        <div class="marquee-track track-left">
+          <!-- ORIGINAL SET -->
+          <div class="bento-box bento-large col-react">
+            <i class="fab fa-react" style="color: #61DAFB;"></i>
+            <span>React.js</span>
+          </div>
+          <div class="bento-box col-html">
+            <i class="fab fa-html5" style="color: #E34F26;"></i>
+            <span>HTML</span>
+          </div>
+          <div class="bento-box col-css">
+            <i class="fab fa-css3-alt" style="color: #1572B6;"></i>
+            <span>CSS</span>
+          </div>
+          <div class="bento-box bento-wide col-tailwind">
+            <i class="fas fa-wind" style="color: #38B2AC;"></i>
+            <span>Tailwind CSS</span>
+          </div>
+          <div class="bento-box bento-wide col-js">
+            <i class="fab fa-js" style="color: #F7DF1E;"></i>
+            <span>JavaScript</span>
+          </div>
+          <div class="bento-box col-next">
+            <i class="fas fa-layer-group" style="color: #fff;"></i>
+            <span>Next.js</span>
+          </div>
+          <div class="bento-box col-flutter">
+            <i class="fas fa-mobile-alt" style="color: #02569B;"></i>
+            <span>Flutter</span>
+          </div>
+
+          <!-- DUPLICATED SET FOR INFINITE SCROLL -->
+          <div class="bento-box bento-large col-react">
+            <i class="fab fa-react" style="color: #61DAFB;"></i>
+            <span>React.js</span>
+          </div>
+          <div class="bento-box col-html">
+            <i class="fab fa-html5" style="color: #E34F26;"></i>
+            <span>HTML</span>
+          </div>
+          <div class="bento-box col-css">
+            <i class="fab fa-css3-alt" style="color: #1572B6;"></i>
+            <span>CSS</span>
+          </div>
+          <div class="bento-box bento-wide col-tailwind">
+            <i class="fas fa-wind" style="color: #38B2AC;"></i>
+            <span>Tailwind CSS</span>
+          </div>
+          <div class="bento-box bento-wide col-js">
+            <i class="fab fa-js" style="color: #F7DF1E;"></i>
+            <span>JavaScript</span>
+          </div>
+          <div class="bento-box col-next">
+            <i class="fas fa-layer-group" style="color: #fff;"></i>
+            <span>Next.js</span>
+          </div>
+          <div class="bento-box col-flutter">
+            <i class="fas fa-mobile-alt" style="color: #02569B;"></i>
+            <span>Flutter</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="marquee-wrapper">
+        <!-- ROW 2 : Back-End & DB -->
+        <div class="marquee-track track-right">
+          <!-- ORIGINAL SET -->
+          <div class="bento-box bento-wide col-php">
+            <i class="fab fa-php" style="color: #777BB4;"></i>
+            <span>PHP</span>
+          </div>
+          <div class="bento-box bento-large col-laravel">
+            <i class="fab fa-laravel" style="color: #FF2D20;"></i>
+            <span>Laravel</span>
+          </div>
+          <div class="bento-box col-node">
+            <i class="fab fa-node-js" style="color: #339933;"></i>
+            <span>Express.js</span>
+          </div>
+          <div class="bento-box col-nest">
+            <i class="fas fa-server" style="color: #E0234E;"></i>
+            <span>Nest.js</span>
+          </div>
+          <div class="bento-box bento-wide col-dotnet">
+            <i class="fab fa-windows" style="color: #512BD4;"></i>
+            <span>.NET</span>
+          </div>
+          <div class="bento-box col-mysql">
+            <i class="fas fa-database" style="color: #4479A1;"></i>
+            <span>MySQL</span>
+          </div>
+          <div class="bento-box col-pg">
+            <i class="fas fa-database" style="color: #336791;"></i>
+            <span>PostgreSQL</span>
+          </div>
+          <div class="bento-box col-mongo">
+            <i class="fas fa-leaf" style="color: #47A248;"></i>
+            <span>MongoDB</span>
+          </div>
+
+          <!-- DUPLICATED SET FOR INFINITE SCROLL -->
+          <div class="bento-box bento-wide col-php">
+            <i class="fab fa-php" style="color: #777BB4;"></i>
+            <span>PHP</span>
+          </div>
+          <div class="bento-box bento-large col-laravel">
+            <i class="fab fa-laravel" style="color: #FF2D20;"></i>
+            <span>Laravel</span>
+          </div>
+          <div class="bento-box col-node">
+            <i class="fab fa-node-js" style="color: #339933;"></i>
+            <span>Express.js</span>
+          </div>
+          <div class="bento-box col-nest">
+            <i class="fas fa-server" style="color: #E0234E;"></i>
+            <span>Nest.js</span>
+          </div>
+          <div class="bento-box bento-wide col-dotnet">
+            <i class="fab fa-windows" style="color: #512BD4;"></i>
+            <span>.NET</span>
+          </div>
+          <div class="bento-box col-mysql">
+            <i class="fas fa-database" style="color: #4479A1;"></i>
+            <span>MySQL</span>
+          </div>
+          <div class="bento-box col-pg">
+            <i class="fas fa-database" style="color: #336791;"></i>
+            <span>PostgreSQL</span>
+          </div>
+          <div class="bento-box col-mongo">
+            <i class="fas fa-leaf" style="color: #47A248;"></i>
+            <span>MongoDB</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="marquee-wrapper">
+        <!-- ROW 3 : Tools & Management -->
+        <div class="marquee-track track-left">
+          <!-- ORIGINAL SET -->
+          <div class="bento-box col-git">
+            <i class="fab fa-git-alt" style="color: #F05032;"></i>
+            <span>Git</span>
+          </div>
+          <div class="bento-box col-github">
+            <i class="fab fa-github" style="color: #ffffff;"></i>
+            <span>GitHub</span>
+          </div>
+          <div class="bento-box bento-wide col-figma">
+            <i class="fab fa-figma" style="color: #F24E1E;"></i>
+            <span>Figma</span>
+          </div>
+          <div class="bento-box col-canva">
+            <i class="fas fa-paint-brush" style="color: #00C4CC;"></i>
+            <span>Canva</span>
+          </div>
+          <div class="bento-box col-jira">
+            <i class="fab fa-jira" style="color: #0052CC;"></i>
+            <span>Jira</span>
+          </div>
+          <div class="bento-box bento-wide col-scrum">
+            <i class="fas fa-sync-alt" style="color: #FB542B;"></i>
+            <span>Scrum / Agile</span>
+          </div>
+          <div class="bento-box col-kanban">
+            <i class="fas fa-columns" style="color: #00C4CC;"></i>
+            <span>Kanban</span>
+          </div>
+          <div class="bento-box col-uml">
+            <i class="fas fa-project-diagram" style="color: #FFB300;"></i>
+            <span>UML</span>
+          </div>
+
+          <!-- DUPLICATED SET FOR INFINITE SCROLL -->
+          <div class="bento-box col-git">
+            <i class="fab fa-git-alt" style="color: #F05032;"></i>
+            <span>Git</span>
+          </div>
+          <div class="bento-box col-github">
+            <i class="fab fa-github" style="color: #ffffff;"></i>
+            <span>GitHub</span>
+          </div>
+          <div class="bento-box bento-wide col-figma">
+            <i class="fab fa-figma" style="color: #F24E1E;"></i>
+            <span>Figma</span>
+          </div>
+          <div class="bento-box col-canva">
+            <i class="fas fa-paint-brush" style="color: #00C4CC;"></i>
+            <span>Canva</span>
+          </div>
+          <div class="bento-box col-jira">
+            <i class="fab fa-jira" style="color: #0052CC;"></i>
+            <span>Jira</span>
+          </div>
+          <div class="bento-box bento-wide col-scrum">
+            <i class="fas fa-sync-alt" style="color: #FB542B;"></i>
+            <span>Scrum / Agile</span>
+          </div>
+          <div class="bento-box col-kanban">
+            <i class="fas fa-columns" style="color: #00C4CC;"></i>
+            <span>Kanban</span>
+          </div>
+          <div class="bento-box col-uml">
+            <i class="fas fa-project-diagram" style="color: #FFB300;"></i>
+            <span>UML</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- PORTFOLIO SECTION -->
     <section class="portfolio" id="works">
       <div class="portfolio-header">
@@ -199,7 +575,7 @@
             <p>
               Intelligent real-time farm management solution.
             </p>
-            <a href="farmops-web.html" class="project-link"
+            <a href="#" onclick="openProjectModal(event, 'farmops_web')" class="project-link"
               >View Case Study <i class="fas fa-external-link-alt"></i
             ></a>
           </div>
@@ -223,7 +599,7 @@
             <h3>FarmOps Mobile</h3>
             <p>Farm management right in your pocket.</p>
             <br>
-            <a href="farmops-mobile.html" class="project-link"
+            <a href="#" onclick="openProjectModal(event, 'farmops_mobile')" class="project-link"
               >View Interactive Demo <i class="fas fa-external-link-alt"></i
             ></a>
           </div>
@@ -248,7 +624,7 @@
             <p>
               Complete car rental and fleet management platform.
             </p>
-            <a href="auto-rent-pro.html" class="project-link"
+            <a href="#" onclick="openProjectModal(event, 'auto_rent_pro')" class="project-link"
               >Live Demo <i class="fas fa-chevron-right"></i
             ></a>
           </div>
@@ -299,6 +675,74 @@
       </div>
     </footer>
 
+    <!-- CERTIFICATE MODAL -->
+    <div id="certModal" class="cert-modal" onclick="closeCertModal(event)">
+      <span class="cert-modal-close" onclick="closeCertModal(event)">&times;</span>
+      <img class="cert-modal-content" id="certImage">
+    </div>
+
+    <!-- PROJECT MODAL -->
+    <div id="projectModal" class="project-modal" onclick="closeProjectModal(event)">
+      <div class="pm-wrapper">
+        <button class="pm-close" onclick="closeProjectModal(event)">&times;</button>
+        
+        <!-- HEADER -->
+        <div class="pm-header">
+          <div class="pm-header-icon"><i class="fas fa-code"></i></div>
+          <div class="pm-header-title">PROJECT SHOWCASE</div>
+        </div>
+
+        <!-- BODY -->
+        <div class="pm-body">
+          <div class="pm-main">
+            <h2 id="pm-title" class="pm-title">Project Title</h2>
+            <div class="pm-meta">
+              <span id="pm-lang" style="color: #888;">Language</span>
+            </div>
+            
+            <p id="pm-desc" class="pm-desc">A project showcasing modern web development practices.</p>
+
+            <div class="pm-section">
+              <div class="pm-section-title">
+                <div class="pm-bar pm-bar-orange"></div>
+                <h3 id="pm-lbl-challenge">The Challenge</h3>
+              </div>
+              <p id="pm-challenge" class="pm-text">Building streamify-config-service required addressing complex state management...</p>
+            </div>
+
+            <div class="pm-section">
+              <div class="pm-section-title">
+                <div class="pm-bar pm-bar-green"></div>
+                <h3 id="pm-lbl-solution">The Solution</h3>
+              </div>
+              <p id="pm-solution" class="pm-text">Leveraging modern architectural patterns, I implemented a modular design that scales...</p>
+            </div>
+          </div>
+
+          <div class="pm-sidebar">
+            <div class="pm-side-block">
+              <h4 id="pm-lbl-tech">TECHNOLOGIES</h4>
+              <div id="pm-tech-tags" class="pm-tags">
+                <span class="pm-tag">Development</span>
+                <span class="pm-tag">Web</span>
+              </div>
+            </div>
+
+            <div class="pm-side-block">
+              <h4 id="pm-lbl-links">LINKS & RESOURCES</h4>
+              <a href="#" id="pm-demolink" class="pm-link-btn" target="_blank">
+                <i class="fas fa-external-link-alt"></i> <span id="pm-lbl-btn">Live Demo</span> <i class="fas fa-chevron-right pm-link-arrow"></i>
+              </a>
+              <a href="#" id="pm-sourcelink" class="pm-link-btn pm-link-btn-secondary" target="_blank" style="margin-top: 10px;">
+                <i class="fab fa-github"></i> <span id="pm-lbl-code">Source Code</span> <i class="fas fa-chevron-right pm-link-arrow"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="translations.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
