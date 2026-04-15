@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bourra Omar | Portfolio</title>
+    <link rel="icon" href="img/portfolio_logo.png" type="image/png" />
     
     <!-- Preconnect to external services for faster DNS resolution -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,31 +27,17 @@
   <body>
     <!-- NAVIGATION -->
     <nav class="navbar">
-      <div class="logo">
-        <svg
-          width="40"
-          height="40"
-          viewBox="0 0 50 50"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M25 0C11.1929 0 0 11.1929 0 25C0 38.8071 11.1929 50 25 50C38.8071 50 50 38.8071 50 25"
-            fill="#FBB03B"
-          />
-          <path
-            d="M25 15C19.4772 15 15 19.4772 15 25C15 30.5228 19.4772 35 25 35"
-            stroke="#232631"
-            stroke-width="8"
-            stroke-linecap="round"
-          />
-        </svg>
-      </div>
+      <a href="#" class="logo" style="text-decoration: none;">
+        <img src="img/portfolio_logo.png" alt="Bourra Omar Logo" style="height: 40px; width: auto;" />
+      </a>
       <div class="nav-right" style="display: flex; align-items: center; gap: 30px;">
         <ul class="nav-links">
-          <li><a href="#" class="active">Services</a></li>
-          <li><a href="#">Works</a></li>
-          <li><a href="#">Blog</a></li>
+          <li><a href="#about" data-i18n="nav_about">À propos</a></li>
+          <li><a href="#education" data-i18n="nav_education">Parcours</a></li>
+          <li><a href="#certifications" data-i18n="nav_certifications">Certification</a></li>
+          <li><a href="#technologies" data-i18n="nav_tools">Outils & Technologies</a></li>
+          <li><a href="#works" data-i18n="nav_works">Travaux</a></li>
+          <li><a href="#contact" data-i18n="nav_collab">Collaborons</a></li>
         </ul>
         
         <div class="lang-dropdown">
@@ -105,7 +92,7 @@
     </header>
 
     <!-- STATS & ABOUT SECTION -->
-    <section class="about-section"> 
+    <section class="about-section reveal"> 
       <div class="about-contact">
         <p class="label">— Contact</p>
         <h3 class="contact-headline">
@@ -167,7 +154,7 @@
     </section>
 
     <!-- CATEGORY CARDS -->
-    <section class="categories">
+    <section class="categories reveal">
       <div class="card yellow">
         <div class="card-icon"><i class="fas fa-code"></i></div>
         <h3>Full Stack<br />Developer.</h3>
@@ -186,7 +173,7 @@
     </section>
 
     <!-- ABOUT ME SECTION -->
-    <section class="about-me" id="about">
+    <section class="about-me reveal" id="about">
       <div class="portfolio-title" style="margin-bottom: 50px;">
         <p class="label">— Discovery</p>
         <h2 style="font-size: 3.5rem; line-height: 1.1;">À Propos de <span class="gradient-text">Moi</span><span class="dot-accent">.</span></h2>
@@ -217,14 +204,14 @@
     </section>
 
     <!-- EDUCATION SECTION -->
-    <section class="education" id="education">
+    <section class="education reveal" id="education">
       <div class="portfolio-title" style="margin-bottom: 50px; text-align: center;">
         <p class="label">— Parcours</p>
         <h2 style="font-size: 3.5rem; line-height: 1.1;">Diplômes et <span class="gradient-text">Formation</span><span class="dot-accent">.</span></h2>
       </div>
       
       <div class="timeline">
-        <div class="timeline-item">
+        <div class="timeline-item reveal" style="transition-delay: 0.1s;">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
             <span class="timeline-date">2024 - 2026</span>
@@ -234,7 +221,7 @@
           </div>
         </div>
 
-        <div class="timeline-item">
+        <div class="timeline-item reveal" style="transition-delay: 0.3s;">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
             <span class="timeline-date">2021 - 2023</span>
@@ -244,7 +231,7 @@
           </div>
         </div>
 
-        <div class="timeline-item">
+        <div class="timeline-item reveal" style="transition-delay: 0.5s;">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
             <span class="timeline-date">2019 - 2021</span>
@@ -254,7 +241,7 @@
           </div>
         </div>
 
-        <div class="timeline-item">
+        <div class="timeline-item reveal" style="transition-delay: 0.7s;">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
             <span class="timeline-date">2018 - 2019</span>
@@ -267,7 +254,7 @@
     </section>
 
     <!-- CERTIFICATIONS SECTION -->
-    <section class="certifications-section" id="certifications">
+    <section class="certifications-section reveal" id="certifications">
       <div class="portfolio-title" style="margin-bottom: 50px; text-align: center;">
         <p class="label">— Validations</p>
         <h2 style="font-size: 3.5rem; line-height: 1.1;">Mes <span class="gradient-text">Certifications</span><span class="dot-accent">.</span></h2>
@@ -328,7 +315,7 @@
     </section>
 
     <!-- TECHNOLOGIES SECTION -->
-    <section class="technologies" id="technologies">
+    <section class="technologies reveal" id="technologies">
       <div class="tech-header">
         <p class="tech-label">— Outils & Technologies</p>
         <h2 class="tech-title">Technologies <span class="gradient-text">que j'utilise</span><span class="dot-accent">.</span></h2>
@@ -549,7 +536,7 @@
     </section>
 
     <!-- PORTFOLIO SECTION -->
-    <section class="portfolio" id="works">
+    <section class="portfolio reveal" id="works">
       <div class="portfolio-header">
         <div class="portfolio-title">
           <p class="label">— Portfolio</p>
@@ -600,7 +587,7 @@
             <p>Farm management right in your pocket.</p>
             <br>
             <a href="#" onclick="openProjectModal(event, 'farmops_mobile')" class="project-link"
-              >View Interactive Demo <i class="fas fa-external-link-alt"></i
+              >See Details <i class="fas fa-external-link-alt"></i
             ></a>
           </div>
         </div>
@@ -625,7 +612,7 @@
               Complete car rental and fleet management platform.
             </p>
             <a href="#" onclick="openProjectModal(event, 'auto_rent_pro')" class="project-link"
-              >Live Demo <i class="fas fa-chevron-right"></i
+              >See Details <i class="fas fa-external-link-alt"></i
             ></a>
           </div>
         </div>
@@ -741,6 +728,11 @@
         </div>
       </div>
     </div>
+
+    <!-- Back to Top Button -->
+    <a href="#" id="back-to-top" class="back-to-top" title="Back to Top">
+      <i class="fas fa-arrow-up"></i>
+    </a>
 
     <script src="translations.js"></script>
     <script src="script.js"></script>
