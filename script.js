@@ -342,7 +342,7 @@ const projectData = {
         },
         tags: ['Web', 'Dashboard', 'IoT', 'Real-time'],
         demoLink: 'farmops-web.html',
-        sourceLink: '#'
+        sourceLink: 'https://github.com/bourraOmar/FarmOps'
     },
     'farmops_mobile': {
         title: 'FarmOps Mobile',
@@ -365,7 +365,7 @@ const projectData = {
         },
         tags: ['Mobile', 'iOS', 'Android', 'Offline-First'],
         demoLink: 'farmops-mobile.html',
-        sourceLink: '#'
+        sourceLink: 'https://github.com/bourraOmar/FarmOps'
     },
     'auto_rent_pro': {
         title: 'Auto Rent Pro',
@@ -388,7 +388,7 @@ const projectData = {
         },
         tags: ['Web', 'SaaS', 'Management', 'Booking'],
         demoLink: 'auto-rent-pro.html',
-        sourceLink: '#'
+        sourceLink: 'https://github.com/bourraOmar/FillRouge'
     }
 };
 
