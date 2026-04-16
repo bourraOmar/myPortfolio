@@ -337,7 +337,7 @@ body:has(.preloader:not(.hidden)) {
     display: flex;
     gap: 30px;
     align-items: center;
-    margin-left: auto;
+    margin-inline-start: auto;
 }
 
 /* LANGUAGE SWITCHER */
