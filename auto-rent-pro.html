@@ -37,31 +37,38 @@
     </header>
 
     <!-- DEMO SECTION -->
-    <section class="demo-section" style="padding: 50px 10% 100px;">
+    <section class="demo-section" style="padding: 50px 2% 100px; max-width: 1200px; margin: 0 auto;">
       
-      <!-- LAPTOP MOCKUP -->
-      <div class="macbook-mockup">
-        <div class="macbook-screen">
-          <div class="slider-track">
-            <div class="slide"><img src="./img/Maquettage Desktop/Desktop - 4.webp" alt="Desktop 3" /></div>
-            <div class="slide"><img src="./img/Maquettage Desktop/Desktop - 5.webp" alt="Desktop 3" /></div>
-            <div class="slide"><img src="./img/Maquettage Desktop/Desktop - 1.webp" alt="Desktop 1" /></div>
-            <div class="slide"><img src="./img/Maquettage Desktop/Desktop - 2.webp" alt="Desktop 2" /></div>
-            <div class="slide"><img src="./img/Maquettage Desktop/Desktop - 3.webp" alt="Desktop 3" /></div>
-            <div class="slide"><img src="./img/Maquettage Desktop/Desktop - 6.webp" alt="Desktop 3" /></div>
-            <div class="slide"><img src="./img/Maquettage Desktop/Desktop - 7.webp" alt="Desktop 3" /></div>
-            <div class="slide"><img src="./img/Maquettage Desktop/Desktop - 12.webp" alt="Desktop 3" /></div>
-            <div class="slide"><img src="./img/Maquettage Desktop/Desktop - 10.webp" alt="Desktop 3" /></div>
-            <div class="slide"><img src="./img/Maquettage Desktop/Desktop - 11.webp" alt="Desktop 3" /></div>
+      <div class="mockup-wrapper" style="display: flex; align-items: center; justify-content: center; gap: 20px;">
+        <!-- Left Arrow -->
+        <button class="slider-btn prev-btn" style="flex-shrink: 0; width: 50px; height: 50px; font-size: 1.5rem;"><i class="fas fa-chevron-left"></i></button>
+
+        <!-- LAPTOP MOCKUP -->
+        <div class="macbook-mockup" style="margin: 0; width: 100%;">
+          <div class="macbook-screen">
+            <div class="slider-track">
+              <div class="slide"><img src="./img/Maquettage Desktop/Desktop - 4.webp" alt="Desktop 3" /></div>
+              <div class="slide"><img src="./img/Maquettage Desktop/Desktop - 5.webp" alt="Desktop 3" /></div>
+              <div class="slide"><img src="./img/Maquettage Desktop/Desktop - 1.webp" alt="Desktop 1" /></div>
+              <div class="slide"><img src="./img/Maquettage Desktop/Desktop - 2.webp" alt="Desktop 2" /></div>
+              <div class="slide"><img src="./img/Maquettage Desktop/Desktop - 3.webp" alt="Desktop 3" /></div>
+              <div class="slide"><img src="./img/Maquettage Desktop/Desktop - 6.webp" alt="Desktop 3" /></div>
+              <div class="slide"><img src="./img/Maquettage Desktop/Desktop - 7.webp" alt="Desktop 3" /></div>
+              <div class="slide"><img src="./img/Maquettage Desktop/Desktop - 12.webp" alt="Desktop 3" /></div>
+              <div class="slide"><img src="./img/Maquettage Desktop/Desktop - 10.webp" alt="Desktop 3" /></div>
+              <div class="slide"><img src="./img/Maquettage Desktop/Desktop - 11.webp" alt="Desktop 3" /></div>
+            </div>
+          </div>
+          <div class="macbook-base">
+            <div class="macbook-notch"></div>
           </div>
         </div>
-        <div class="macbook-base">
-          <div class="macbook-notch"></div>
-        </div>
+
+        <!-- Right Arrow -->
+        <button class="slider-btn next-btn" style="flex-shrink: 0; width: 50px; height: 50px; font-size: 1.5rem;"><i class="fas fa-chevron-right"></i></button>
       </div>
 
-      <div class="slider-controls">
-        <button class="slider-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+      <div class="slider-controls" style="margin-top: 60px;">
         <div class="dot-indicators">
           <div class="dot active"></div>
           <div class="dot"></div>
@@ -74,7 +81,6 @@
           <div class="dot"></div>
           <div class="dot"></div>
         </div>
-        <button class="slider-btn next-btn"><i class="fas fa-chevron-right"></i></button>
       </div>
 
     </section>
