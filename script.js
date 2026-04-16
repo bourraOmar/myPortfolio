@@ -1,5 +1,8 @@
 // Preloader Logic
 let preloaderTimeout;
+let progressValue = 0;
+let progressInterval;
+let isPageLoaded = false;
 
 // Hide preloader after animations complete
 function hidePreloader() {
@@ -10,17 +13,53 @@ function hidePreloader() {
     }
 }
 
-// Wait for window load
+// Simulate actual progress loading
+const loaderProgress = document.getElementById('loaderProgress');
+const preloader = document.getElementById('preloader');
+
+if (loaderProgress && preloader) {
+    // The bar needs a delay before it starts (to match the old CSS delay of 1s)
+    setTimeout(() => {
+        progressInterval = setInterval(() => {
+            if (progressValue >= 90) {
+                // Wait at 90% until the page actually loads
+                clearInterval(progressInterval);
+            } else {
+                // Add random increments for a realistic feel
+                progressValue += Math.random() * 15;
+                if (progressValue > 90) progressValue = 90;
+                loaderProgress.style.width = progressValue + '%';
+            }
+        }, 200);
+    }, 1000);
+}
+
+// Wait for window actual load
 window.addEventListener('load', () => {
     console.log('Window loaded at:', new Date().getTime());
-    const preloader = document.getElementById('preloader');
-    if (preloader) {
-        // splitBar animation: 1s delay + 2s duration + 0.8s transition = 3.8s minimum
-        preloaderTimeout = setTimeout(() => {
-            hidePreloader();
-        }, 3900);
+    isPageLoaded = true;
+    
+    if (loaderProgress) {
+        // Stop the interval and force to 100%
+        clearInterval(progressInterval);
+        
+        // Wait for the 1s delay (original splitBar animation start delay) before finishing immediately
+        setTimeout(() => {
+            loaderProgress.style.width = '100%';
+            loaderProgress.style.opacity = '0';
+            
+            // Hide the preloader 0.8s after bar finishes
+            setTimeout(hidePreloader, 800);
+        }, 1000); 
+    } else {
+        hidePreloader();
     }
 });
+
+// Fallback to hide preloader after 5s max
+setTimeout(() => {
+    hidePreloader();
+}, 5000);
 
 // Allow clicking on preloader to skip it
 document.addEventListener('click', (e) => {
