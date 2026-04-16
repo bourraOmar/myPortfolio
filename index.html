@@ -606,14 +606,37 @@
 
         <!-- PROJECT 3: AUTO RENT PRO (Horizontal/Clean) -->
         <div class="project-card wide">
-          <div class="project-image-wrapper">
-            <img
-              src="./img/Maquettage Desktop/img3.webp"
-              alt="Auto Rent Pro"
-              loading="lazy"
-              decoding="async"
-            />
-            <div class="overlay-gradient"></div>
+          <div class="project-image-wrapper" style="overflow: visible; background: transparent; padding: 20px;">
+            <div class="mockup-wrapper" style="position: relative; width: 100%; max-width: 800px; margin: 0 auto; display: flex; align-items: center;">
+              
+              <!-- Left Arrow -->
+              <button class="slider-btn prev-btn" style="position: absolute; left: -20px; z-index: 10; width: 40px; height: 40px;"><i class="fas fa-chevron-left"></i></button>
+
+              <!-- LAPTOP MOCKUP -->
+              <div class="macbook-mockup" style="margin: 0; width: 100%;">
+                <div class="macbook-screen">
+                  <div class="slider-track">
+                    <div class="slide"><img src="./img/Maquettage Desktop/Desktop - 4.webp" alt="Desktop 3" /></div>
+                    <div class="slide"><img src="./img/Maquettage Desktop/Desktop - 5.webp" alt="Desktop 3" /></div>
+                    <div class="slide"><img src="./img/Maquettage Desktop/Desktop - 1.webp" alt="Desktop 1" /></div>
+                    <div class="slide"><img src="./img/Maquettage Desktop/Desktop - 2.webp" alt="Desktop 2" /></div>
+                    <div class="slide"><img src="./img/Maquettage Desktop/Desktop - 3.webp" alt="Desktop 3" /></div>
+                    <div class="slide"><img src="./img/Maquettage Desktop/Desktop - 6.webp" alt="Desktop 3" /></div>
+                    <div class="slide"><img src="./img/Maquettage Desktop/Desktop - 7.webp" alt="Desktop 3" /></div>
+                    <div class="slide"><img src="./img/Maquettage Desktop/Desktop - 12.webp" alt="Desktop 3" /></div>
+                    <div class="slide"><img src="./img/Maquettage Desktop/Desktop - 10.webp" alt="Desktop 3" /></div>
+                    <div class="slide"><img src="./img/Maquettage Desktop/Desktop - 11.webp" alt="Desktop 3" /></div>
+                  </div>
+                </div>
+                <div class="macbook-base">
+                  <div class="macbook-notch"></div>
+                </div>
+              </div>
+
+              <!-- Right Arrow -->
+              <button class="slider-btn next-btn" style="position: absolute; right: -20px; z-index: 10; width: 40px; height: 40px;"><i class="fas fa-chevron-right"></i></button>
+
+            </div>
           </div>
           <div class="project-info">
             <div class="tech-stack">
@@ -627,6 +650,13 @@
               >See Details <i class="fas fa-external-link-alt"></i
             ></a>
           </div>
+        </div>
+      </div>
+      
+      <div class="slider-controls" style="display: none;">
+        <!-- Hidden but needed by JS logic index match -->
+        <div class="dot-indicators">
+          <div class="dot active"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div>
         </div>
       </div>
     </section>
