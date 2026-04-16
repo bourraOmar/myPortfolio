@@ -1,13 +1,42 @@
 // Preloader Logic
-window.addEventListener('load', () => {
+let preloaderTimeout;
+
+// Hide preloader after animations complete
+function hidePreloader() {
     const preloader = document.getElementById('preloader');
     if (preloader) {
-        // Option 2: Add a minimum delay for the animation to show (useful if page loads very fast)
-        setTimeout(() => {
-            preloader.classList.add('hidden');
-        }, 3200); // 3.2s gives the beautiful floating logo and center-split bar time to wow the user
+        preloader.classList.add('hidden');
+        console.log('Preloader hidden at:', new Date().getTime());
+    }
+}
+
+// Wait for window load
+window.addEventListener('load', () => {
+    console.log('Window loaded at:', new Date().getTime());
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+        // splitBar animation: 1s delay + 2s duration + 0.8s transition = 3.8s minimum
+        preloaderTimeout = setTimeout(() => {
+            hidePreloader();
+        }, 3900);
     }
 });
+
+// Allow clicking on preloader to skip it
+document.addEventListener('click', (e) => {
+    if (e.target.closest('#preloader')) {
+        hidePreloader();
+    }
+});
+
+// Fallback: hide preloader after max 5 seconds
+setTimeout(() => {
+    const preloader = document.getElementById('preloader');
+    if (preloader && !preloader.classList.contains('hidden')) {
+        console.log('Force hiding preloader after 5 seconds');
+        hidePreloader();
+    }
+}, 5000);
 
 // Language Switcher Logic
 const langBtn = document.getElementById('langBtn');
@@ -51,6 +80,34 @@ if (langBtn && langDropdown) {
             applyTranslations(langCode.toLowerCase());
             console.log('Language switched to:', langCode.toLowerCase());
         });
+    });
+}
+
+// Mobile Menu Toggle Logic
+const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+const navLinks = document.querySelector('.nav-links');
+
+if (mobileMenuToggle && navLinks) {
+    mobileMenuToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        mobileMenuToggle.classList.toggle('active');
+        navLinks.classList.toggle('mobile-menu-open');
+    });
+    
+    // Close menu when clicking on a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenuToggle.classList.remove('active');
+            navLinks.classList.remove('mobile-menu-open');
+        });
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.navbar')) {
+            mobileMenuToggle.classList.remove('active');
+            navLinks.classList.remove('mobile-menu-open');
+        }
     });
 }
 
