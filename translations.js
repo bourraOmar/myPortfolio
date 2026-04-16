@@ -1,5 +1,7 @@
 const translations = {
   fr: {
+    "main_title": "Bourra<br /><span class=\"gradient-text\">Omar</span><span class=\"dot-accent\">.</span>",
+    "loader_name": "Bourra Omar<span class=\"dot\"></span>",
     "nav_about": "À propos",
     "nav_education": "Parcours",
     "nav_certifications": "Certification",
@@ -83,8 +85,8 @@ const translations = {
     "footer_rights": "&copy; 2024 Bourra Omar. Tous droits réservés.",
     "footer_built": "Construit avec <i class=\"fas fa-heart\" style=\"color: var(--accent);\"></i> & de la caféine."
   },
-  en: {
-    "nav_about": "About",
+  en: {    "main_title": "Bourra<br /><span class=\"gradient-text\">Omar</span><span class=\"dot-accent\">.</span>",
+    "loader_name": "Bourra Omar<span class=\"dot\"></span>",    "nav_about": "About",
     "nav_education": "Background",
     "nav_certifications": "Certifications",
     "nav_tools": "Tools & Tech",
@@ -167,8 +169,8 @@ const translations = {
     "footer_rights": "&copy; 2024 Bourra Omar. All rights reserved.",
     "footer_built": "Built with <i class=\"fas fa-heart\" style=\"color: var(--accent);\"></i> & caffeine."
   },
-  ar: {
-    "nav_about": "من أنا",
+  ar: {    "main_title": "بورا<br /><span class=\"gradient-text\">عمر</span><span class=\"dot-accent\">.</span>",
+    "loader_name": "بورا عمر<span class=\"dot\"></span>",    "nav_about": "من أنا",
     "nav_education": "المسار التعليمي",
     "nav_certifications": "الشهادات",
     "nav_tools": "الأدوات والتقنيات",

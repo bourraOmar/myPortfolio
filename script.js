@@ -163,6 +163,8 @@ function applyTranslations(lang) {
         ".nav-links li:nth-child(5) a": t.nav_works,
         ".nav-links li:nth-child(6) a": t.nav_collab,
         // Hero/Badge
+        ".main-title": t.main_title,
+        ".loader-name": t.loader_name,
         ".badge": t.hero_badge,
         ".sub-headline": t.hero_headline,
         ".hero-desc": t.hero_desc,
