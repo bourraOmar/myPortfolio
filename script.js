@@ -1,3 +1,14 @@
+// Preloader Logic
+window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+        // Option 2: Add a minimum delay for the animation to show (useful if page loads very fast)
+        setTimeout(() => {
+            preloader.classList.add('hidden');
+        }, 3200); // 3.2s gives the beautiful floating logo and center-split bar time to wow the user
+    }
+});
+
 // Language Switcher Logic
 const langBtn = document.getElementById('langBtn');
 const langDropdown = document.querySelector('.lang-dropdown');
@@ -49,9 +60,12 @@ function applyTranslations(lang) {
 
     const map = {
         // Nav
-        ".nav-links li:nth-child(1) a": t.nav_services,
-        ".nav-links li:nth-child(2) a": t.nav_works,
-        ".nav-links li:nth-child(3) a": t.nav_blog,
+        ".nav-links li:nth-child(1) a": t.nav_about,
+        ".nav-links li:nth-child(2) a": t.nav_education,
+        ".nav-links li:nth-child(3) a": t.nav_certifications,
+        ".nav-links li:nth-child(4) a": t.nav_tools,
+        ".nav-links li:nth-child(5) a": t.nav_works,
+        ".nav-links li:nth-child(6) a": t.nav_collab,
         // Hero/Badge
         ".badge": t.hero_badge,
         ".sub-headline": t.hero_headline,
